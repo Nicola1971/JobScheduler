@@ -30,10 +30,13 @@ $out = '
 
    <div class="tab-page">
       <h2 class="tab"><i class="fa fa-clock-o" aria-hidden="true"></i> Tasks</h2>
-  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles?add=1"><strong>click here to add your
-  scheduled tasks</strong></a></li>
-  <li><a href="../assets/modules/jobscheduler/firepjs.php">Click here</a> to run the scheduled tasks already 
-  added above.</li>
+  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles/"><strong>Scheduled tasks</strong></a></li>
+  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles?add=1"><strong> Add a NEW schedule</strong></a></li>
+    
+    <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles/error-logs.php"><strong> View error-logs</strong></a></li>
+
+  <li><a href="../assets/modules/jobscheduler/firepjs.php"><strong> Run the scheduled tasks already 
+  added above.</strong></a></li>
 
    </div>
    
