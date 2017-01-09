@@ -1,8 +1,7 @@
 <?php
 global $_lang, $manager_language, $manager_theme,$theme_refresher,$modx_manager_charset, $syncid, $syncsite,$messagesallowed;
-$help = $_lang['help'];
-$Config = $_lang["settings_module"];
-$out .= '
+
+$out = '
 <html>
 <head>
 <title>phpJobScheduler - Readme</title>
@@ -21,10 +20,6 @@ $out .= '
 </h1>
 <div id="actions">
     <ul class="actionButtons">
-    <!--@IF:[[#hasPermission?key=new_module]] OR [[#hasPermission?key=edit_module]]-->
-    <li id="Button6"><a href="index.php?a=108&id='.$module_id.'"><i class="fa fa-cog"></i> '.$Config.'</a> </li>
-    <!--@ENDIF-->
-     <li id="Button9"><a href="#" class="evobackup-help"><i class="fa fa-question-circle"></i> '.$help.'</a></li>
         <li id="Button5"><a href="index.php?a=2">
             '.$_lang['close'].'
         </a></li>
