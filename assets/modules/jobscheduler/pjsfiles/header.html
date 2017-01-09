@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>phpJobScheduler - admin </title>
+	<link rel="stylesheet" type="text/css" href="../../../../manager/media/style/MODxRE2/style.css" />
+
+    <link rel="stylesheet" href="../../../../manager/media/style/common/font-awesome/css/font-awesome.min.css" />
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/tabpane.js"></script>
+<script src="functions.js" type="text/javascript"></script>
+<style>
+.alert {padding: 20px;background-color: #f44336; color: white;margin-bottom: 5px;}
+.success {padding: 20px;background-color: #07b922; color: white;margin-bottom: 5px;}
+.success a.textlink:link {color: white!important;}
+</style>
+</head>
+
+<body>
+<h1 class="pagetitle">
+  <span class="pagetitle-icon">
+    <i class="fa fa-download"></i>
+  </span>
+  <span class="pagetitle-text">
+    phpJobScheduler - admin 
+  </span>
+</h1>
+<div id="actions">
+    <ul class="actionButtons">
+    <!--
+    <li id="Button6"><a href="manager/index.php?a=108&id='.$module_id.'"><i class="fa fa-cog"></i> '.$Config.'</a> </li>
+
+     <li id="Button9"><a href="#" class="evobackup-help"><i class="fa fa-question-circle"></i> Home</a></li>-->
+        <li id="Button5"><a href="../../../../manager/index.php?a=2">
+            Close
+        </a></li>
+    </ul>
+</div>
+<div class="sectionBody">  
+<div class="tab-pane" id="tab-pane-1">
+
+   <div class="tab-page">
+      <h2 class="tab"><i class="fa fa-clock-o" aria-hidden="true"></i> Manage Tasks</h2></h2>
+<div align="center">
+  <center>
+
+<table cellSpacing="3" cellPadding="0" border="0" width="800">
+<TBODY>
+  <tr bgColor="#334873">
+    <td width="200" align="middle" bgcolor="#FFFFFF"><p align="center"><a href="http://www.phpjobscheduler.co.uk/"><img
+    src="pjslogo.gif" width="165" height="75" alt="phpJobScheduler - schedule PHP scripts to run" border="0"></a>
+<br>You are running Version: <?php version_check(); ?> 
+</td>
+    <td align="middle" bgcolor="#FFFFFF" width="500">Released under <a href="http://www.gnu.org/licenses/licenses.html#GPL">GPL License</a> That means its free to use!&nbsp; Enjoy&nbsp; ;-)<br><br>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">To help ensure future updates please do consider to<br> 
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2148409">
+<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+<br />
+Every penny or cent helps
+</form>  </center></div>
+</form>
+</td>
+  </tr>
+</TBODY>
+</table>
+<br>
+<strong><a href="./">Scheduled tasks</a> - <a href="./?add=1">Add a NEW schedule</a> - <a href="error-logs.php">View error-logs</a><br>
+</strong>  <br>
+  </center>
+</div>
+
