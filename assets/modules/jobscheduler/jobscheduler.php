@@ -21,7 +21,7 @@ $out = '
     <i class="fa fa-clock-o"></i>
   </span>
   <span class="pagetitle-text">
-    phpJobScheduler
+    JobScheduler
   </span>
 </h1>
 <div id="actions">

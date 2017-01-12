@@ -18,7 +18,7 @@ include_once("functions.php");
 
 $headerout ='<html>
 <head>
-<title>phpJobScheduler - admin </title>
+<title>JobScheduler - Tasks </title>
 	<link rel="stylesheet" type="text/css" href="../../../../manager/media/style/MODxRE2/style.css" />
 
     <link rel="stylesheet" href="../../../../manager/media/style/common/font-awesome/css/font-awesome.min.css" />
@@ -33,7 +33,7 @@ $headerout ='<html>
     <i class="fa fa-clock-o"></i>
   </span>
   <span class="pagetitle-text">
-    phpJobScheduler - admin 
+   JobScheduler - Tasks
   </span>
 </h1>
 <div id="actions">
