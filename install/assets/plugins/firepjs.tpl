@@ -5,7 +5,7 @@
  * fire jobscheduler image
  *
  * @author    Nicola Lambathakis
- * @category    plugin
+ * @category    admin
  * @version    1.0  RC3
  * @internal    @events OnWebPagePrerender
  * @internal    @installset base
