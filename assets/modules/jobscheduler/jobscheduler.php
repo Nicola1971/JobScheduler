@@ -1,6 +1,10 @@
 <?php
 global $_lang, $manager_language, $manager_theme,$theme_refresher,$modx_manager_charset, $syncid, $syncsite,$messagesallowed;
 
+$modx_root_dir =$modx->config['base_path'];
+$mods_path = $modx->config['base_path'] . "assets/modules/";
+$site_name = preg_replace('/[^a-zA-Z0-9]+/', '_', $modx->config['site_name']);
+$module_id = (!empty($_REQUEST["id"])) ? (int)$_REQUEST["id"] : $yourModuleId;
 $out = '
 <html>
 <head>
@@ -9,6 +13,8 @@ $out = '
 <link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
 <script src="../assets/modules/jobscheduler/js/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/modules/jobscheduler/js/tabpane.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/modules/jobscheduler/css/style.css" />
+</head>
 <body >
 <h1 class="pagetitle">
   <span class="pagetitle-icon">
@@ -84,8 +90,8 @@ Full details can be found at: <a href="http://www.phpjobscheduler.co.uk/">www.ph
       <li type="i">or simply add to  your <strong>existing<font color="#0080FF"> Template</font> or inside the content of a page</strong>,  like your index.html home page and/or any other well visited page on any website:      <br>
       </li>
     <blockquote>
-	<form name="f1">
-      <textarea rows="2" cols="80" onClick="this.focus();this.select()" name="fire_url" type="text" style="border:solid 1px #0080FF;"><img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/></textarea>
+	<code>
+     &lt;img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/&gt</code>
  
 <strong><div id="domain_msg">Ensure you change YOURDOMAIN to your own domain name!</div></strong>
 </form>
@@ -209,7 +215,7 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
 <hr width="100%" color="#808080" align="center">
 </div>
 <div class="tab-page">
-      <h2 class="tab"><i class="fa fa-university" aria-hidden="true"></i> About</h2>
+      <h2 class="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> About</h2>
       <div>
 <table cellSpacing="3" cellPadding="0" border="0" width="1058">
   <tr bgColor="#334873">
