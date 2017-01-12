@@ -30,6 +30,8 @@ $out = '
 
    <div class="tab-page">
       <h2 class="tab"><i class="fa fa-clock-o" aria-hidden="true"></i> Tasks</h2>
+      
+      <h3> Manage Tasks</h3>
   <p><a href="../assets/modules/jobscheduler/pjsfiles/"><i class="fa fa-clock-o fa-lg"></i><strong> Scheduled tasks</strong></a></p>
   
   <p><a href="../assets/modules/jobscheduler/pjsfiles?add=1"><i class="fa fa-plus-circle fa-lg"></i><strong> Add a NEW schedule</strong></a></p>
@@ -118,21 +120,18 @@ there are TWO main points to note!</p>
     methods:<br>
     <br>
     <ul>
-      <li type="i">add to the START of an<strong> existing<font color="#7B8CD6"> </font><font
-        color="#8080C0">PHP</font> file</strong>, for example to your index.php home page (and/or
-        any other relevant page in the root directory): 
+      <li type="i">Enable <strong> firepjs</strong> plugin, that will automatically add the required code.
         <blockquote>
-          <p><font color="#8080C0"><strong>&lt;?php include( dirname(__FILE__) .
-          &quot;/phpjobscheduler/firepjs.php&quot;); ?&gt;</strong></font><br>
+          <p><font color="#8080C0"><strong></strong></font><br>
           </p>
         </blockquote>
       </li>
-      <li type="i">or simply add to  an <strong>existing<font color="#0080FF"> HTML</font> page</strong>,  like your index.html home page and/or any other well visited page on any website:      <br>
+      <li type="i">or simply add to  your <strong>existing<font color="#0080FF"> Template</font> or inside the content of a page</strong>,  like your index.html home page and/or any other well visited page on any website:      <br>
       </li>
     </ul>
     <blockquote>
 	<form name="f1">
-      <textarea rows="2" cols="80" onClick="this.focus();this.select()" name="fire_url" type="text" style="border:solid 1px #0080FF;">&lt;img src=&quot;http://YOURDOMAIN/phpjobscheduler/firepjs.php?return_image=1&quot; border=&quot;0&quot; alt=&quot;phpJobScheduler&quot;&gt;</textarea>
+      <textarea rows="2" cols="80" onClick="this.focus();this.select()" name="fire_url" type="text" style="border:solid 1px #0080FF;"><img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/></textarea>
  
 <strong><div id="domain_msg">Ensure you change YOURDOMAIN to your own domain name!</div></strong>
 </form>
