@@ -32,7 +32,7 @@ function testpath()
         <tr bgColor="#ffffff" align="center">
           <td vAlign="top" align="right"><b>Job name:</b></td>
           <td align="left" colspan="2"><input class="box" size="29" name="name"
-          value="Email site stats to boss"><br>
+          value="Backup Evo Database"><br>
           The name will be used to refer to this new job<br />
           <br /></td>
         </tr>
@@ -243,7 +243,7 @@ original_hours=0;
 original_days=0;
 original_weeks=0;
 
-the_link=self.location.hostname+self.location.pathname.replace("pjsfiles/","eg_email_site_stats_to_boss.php");
+the_link=self.location.hostname+self.location.pathname.replace("pjsfiles/","cron-backup-sqlonly.php");
 document.I_F.scriptpath.value="http://"+the_link;
 
 function disable_others()
