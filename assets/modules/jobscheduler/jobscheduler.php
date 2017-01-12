@@ -45,82 +45,37 @@ $out = '
    
 <div class="tab-page">
       <h2 class="tab"><i class="fa fa-book" aria-hidden="true"></i> Readme</h2>
-
+<h3>phpJobScheduler for MODX Evolution Module</h3>
 <p><strong><em>php</em>JobScheduler is designed to automate tasks by
 scheduling PHP scripts to run at set intervals.</strong><br>
 This version runs silently (no screen output) but saves the output, including any errors,
 to the database.<br>
 Full details can be found at: <a href="http://www.phpjobscheduler.co.uk/">www.phpjobscheduler.co.uk</a></p>
 <strong>
-
+<h3>Guide for MODX Evolution</h3>
 <p>Requirements:</strong> 
 
 <ul>
+ <li>MODX Evolution 1.2</li>
   <li>MySQL (should now work with many other databases, just change the settings 
   in&nbsp; /phpjobscheduler/pjsfiles/constants.inc.php)</li>
   <li>PHP 5.x</li>
 </ul>
 <p><strong>Index:</strong></p>
 <ul>
-	<li><a href="#upgrade">Upgrade details</a> - how to setup over an existing 
-	install</li>
-	<li><a href="#new_install">Complete NEW install</a> - how to install from 
+	<li><a href="#new_install">NEW install</a> - how to install from 
 	fresh </li>
 	<li><a href="#error_log">Error log</a> - error logging, turn on and off</li>
 	<li><a href="#timeframewindow">TimeFrame window</a> - altering the time 
 	frame window, how to change the settings to suit your website</li>
 	<li><a href="#debug">Debug</a> - testing</li>
-	<li><a href="#history">History</a> - from launch to date...</li>
-	<li><a href="#disclaimer">Disclaimer</a> - to know before you start using 
-	this application</li>
 </ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>To upgrade an existing installation:</strong><a name="upgrade"></a>&nbsp; 
-there are TWO main points to note!</p>
-<ul>
-  <li>
-    <p align="left">Your existing scheduled tasks, if any exist,
-      will remain unchanged within your database.&nbsp; <br>
-      Also, you can retain your existing config file:<strong>&nbsp; /phpjobscheduler/pjsfiles/config.inc.php<br>
-	<br></strong>If you have previously made changes to:&nbsp; /<strong>phpjobscheduler/pjsfiles/constants.inc.php</strong>
-	<br>then you will need to make those changes again as this file now contains 
-	many new constants.</p>
-  </li>
-  <li>
-    <p align="left">When you have followed the details below (To complete a new 
-	installation) you MUST login to check your scheduled tasks, by
-      doing so it will automatically update your database and add the required new fields to the
-      tables as required.<br><br><br></p>
-  </li>
-</ul>
-<strong><p>To complete a new installation:</strong> <a name="new_install"></a>
+<strong><p>New installation on Evolution:</strong> <a name="new_install"></a>
 
 <ul>
-  <li>Unzip the files to your computer <br>
-    <br>
+  <li>Install with Package Manager or Extras Module <br>
   </li>
-  <li>Edit the file:<strong> /phpjobscheduler/pjsfiles/config.inc.php </strong><br>
-    using notepad or your favourite PHP editor.<br>
-  </li>
-  <li>Upload the folders and files to your server. <br>
-    <br>
-  </li>
-  <li><font color="#ff0000">YOU MUST <strong>password protect the &quot;pjsfiles&quot; folder</strong></font> - if you fail
-    to do so and someone found the folder on your website they could add/delete/modify your
-    scheduled jobs!&nbsp; If you host on Unix or Linux add htaccess to the folder to force a
-    username and password prompt before entry (if you host on a Windows machine RTFM).&nbsp;
-    You can normally add security to a folder using your Control Panel provided by your
-    host (please contact your host for details - and NOT ME!).<br>
-    <br>
-  </li>
-  <li>Then add the <strong><font color="#7B8CD6"></font><font
-        color="#8080C0">PHP</font></strong> or <strong><font color="#0080FF">HTML</font></strong> code 
-  to your website (or websites - you can add it to more than one), this is to fire your scheduled tasks when due.&nbsp; There are two
-    methods:<br>
-    <br>
-    <ul>
-      <li type="i">Enable <strong> firepjs</strong> plugin, that will automatically add the required code.
+  <li type="i">Enable <strong> firepjs</strong> plugin (included in this package), that will automatically add the required code.
         <blockquote>
           <p><font color="#8080C0"><strong></strong></font><br>
           </p>
@@ -128,7 +83,6 @@ there are TWO main points to note!</p>
       </li>
       <li type="i">or simply add to  your <strong>existing<font color="#0080FF"> Template</font> or inside the content of a page</strong>,  like your index.html home page and/or any other well visited page on any website:      <br>
       </li>
-    </ul>
     <blockquote>
 	<form name="f1">
       <textarea rows="2" cols="80" onClick="this.focus();this.select()" name="fire_url" type="text" style="border:solid 1px #0080FF;"><img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/></textarea>
@@ -154,8 +108,8 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
         <p>&nbsp;</p>
     </blockquote>
   </li>
-  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles?add=1"><strong>click here to add your
-  scheduled tasks</strong></a>
+  <li>click on <strong><i class="fa fa-plus-circle fa-lg"></i> Add a NEW schedule</strong>, in the Tasks tab,  to add your
+  scheduled tasks</strong>
   
   
   
@@ -174,7 +128,7 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
   <li><a href="../assets/modules/jobscheduler/firepjs.php">Click here</a> to run the scheduled tasks already 
   added above.&nbsp; This allows you to check the output and to see all is 
   working.&nbsp; As DEBUG is on by default you should see some output if it is 
-  working for you like:&nbsp; &quot;Found script to run...&quot;, etc.<br><br><br><br>
+  working for you like:&nbsp; &quot;Found script to run...&quot;, etc.<br><br>
   </li>
 	<li>When you are happy all is running without error set DEBUG to false, edit the file:<strong> /phpjobscheduler/pjsfiles/config.inc.php </strong><br>
     <br>
@@ -202,8 +156,7 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
     </blockquote>
   </blockquote>
   <p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
+
 </blockquote>
 
 <hr width="100%" color="#808080" align="center">
@@ -230,7 +183,6 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
 		</blockquote>
 	</blockquote>
 
-	<p align="left">&nbsp;</p>
 	<p align="left">&nbsp;</p>
 </blockquote>
 
