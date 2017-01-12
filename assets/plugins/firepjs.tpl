@@ -9,7 +9,7 @@
  * @version    1.0  RC3
  * @internal    @events OnWebPagePrerender
  * @internal    @installset base
- * @internal    @disabled 1
+ * @internal    @disabled 0
  * @internal    @modx_category Cookies
  * @internal    @properties  
  */
