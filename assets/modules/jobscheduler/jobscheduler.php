@@ -51,7 +51,7 @@ $out = '
    
 <div class="tab-page">
       <h2 class="tab"><i class="fa fa-book" aria-hidden="true"></i> Readme</h2>
-<h3>phpJobScheduler for MODX Evolution Module</h3>
+<h3>PhpJobScheduler Module for MODX Evolution </h3>
 <p><strong><em>php</em>JobScheduler is designed to automate tasks by
 scheduling PHP scripts to run at set intervals.</strong><br>
 This version runs silently (no screen output) but saves the output, including any errors,
