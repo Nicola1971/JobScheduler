@@ -4,7 +4,7 @@ global $_lang, $manager_language, $manager_theme,$theme_refresher,$modx_manager_
 $out = '
 <html>
 <head>
-<title>phpJobScheduler - Readme</title>
+<title>phpJobScheduler</title>
 <link rel="stylesheet" type="text/css" href="media/style/'.$manager_theme.'/style.css" />
 <link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
 <script src="../assets/modules/jobscheduler/js/jquery.min.js"></script>
@@ -30,48 +30,21 @@ $out = '
 
    <div class="tab-page">
       <h2 class="tab"><i class="fa fa-clock-o" aria-hidden="true"></i> Tasks</h2>
-  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles/"><strong>Scheduled tasks</strong></a></li>
-  <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles?add=1"><strong> Add a NEW schedule</strong></a></li>
+  <p><a href="../assets/modules/jobscheduler/pjsfiles/"><i class="fa fa-clock-o fa-lg"></i><strong> Scheduled tasks</strong></a></p>
+  
+  <p><a href="../assets/modules/jobscheduler/pjsfiles?add=1"><i class="fa fa-plus-circle fa-lg"></i><strong> Add a NEW schedule</strong></a></p>
     
-    <li><a class="primary" href="../assets/modules/jobscheduler/pjsfiles/error-logs.php"><strong> View error-logs</strong></a></li>
+  <p><a href="../assets/modules/jobscheduler/pjsfiles/error-logs.php"><i class="fa fa-exclamation-circle fa-lg"></i><strong> View error-logs</strong></a></p>
 
-  <li><a href="../assets/modules/jobscheduler/firepjs.php"><strong> Run the scheduled tasks already 
-  added above.</strong></a></li>
+  <p><a href="../assets/modules/jobscheduler/firepjs.php"><i class="fa fa-play-circle fa-lg"></i> <strong> Run the scheduled tasks already 
+  added above.</strong></a></p>
 
    </div>
    
 <div class="tab-page">
       <h2 class="tab"><i class="fa fa-book" aria-hidden="true"></i> Readme</h2>
-<div align="center">
-  <center>
 
-<table cellSpacing="3" cellPadding="0" border="0" width="1058">
-  <tr bgColor="#334873">
-    <td width="200" align="middle" bgcolor="#FFFFFF"><p align="center"><a
-    href="http://www.phpjobscheduler.co.uk/"><img src="../assets/modules/jobscheduler/pjslogo.gif"
-    alt="phpJobScheduler" border="0" width="165" height="75"></a><strong><br>
-    </strong></td>
-    <td align="middle" bgcolor="#FFFFFF" width="849"><p align="left"><strong>phpJobScheduler - README</strong><br>
-      Author: <a href="http://www.DWalker.co.uk">DWalker.co.uk</a>&nbsp; For help and support please try the <a href="http://members.dwalker.co.uk/forum/">forum</a><br>
-    </td>
-  </tr>
-</table>
-<br>
-</center></div>
-
-<center>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">Like it?  Please consider to<br> 
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="2148409">
-<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="">
-<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-<br />
-Every penny or cent helps :-) 
-</form>
-
-</center>
-
-<p align="center"><strong><em>php</em>JobScheduler is designed to automate tasks by
+<p><strong><em>php</em>JobScheduler is designed to automate tasks by
 scheduling PHP scripts to run at set intervals.</strong><br>
 This version runs silently (no screen output) but saves the output, including any errors,
 to the database.<br>
@@ -285,7 +258,22 @@ if (top.location.href.indexOf("noconfig")>-1) alert("Before you can add a task y
 <hr width="100%" color="#808080" align="center">
 </div>
 <div class="tab-page">
-      <h2 class="tab"><i class="fa fa-university" aria-hidden="true"></i> History</h2>
+      <h2 class="tab"><i class="fa fa-university" aria-hidden="true"></i> About</h2>
+      <div>
+<table cellSpacing="3" cellPadding="0" border="0" width="1058">
+  <tr bgColor="#334873">
+    <td width="200" align="middle" bgcolor="#FFFFFF"><p align="center"><a
+    href="http://www.phpjobscheduler.co.uk/"><img src="../assets/modules/jobscheduler/pjslogo.gif"
+    alt="phpJobScheduler" border="0" width="165" height="75"></a><strong><br>
+    </strong></td>
+    <td align="middle" bgcolor="#FFFFFF" width="849"><p align="left"><strong>phpJobScheduler - README</strong><br>
+      Author: <a href="http://www.DWalker.co.uk">DWalker.co.uk</a>&nbsp; For help and support please try the <a href="http://members.dwalker.co.uk/forum/">forum</a><br>
+    </td>
+  </tr>
+</table>
+<br>
+</div>
+
 <p align="left"><strong>HISTORY</strong><a name="history"></a></p>
 <blockquote>
 <p><strong>Launch Date: 14th Oct 2003 <br></strong><br><strong>Version and 
@@ -316,7 +304,15 @@ Improved database connectivity now using PDO, the old PHP MySQL functions (eg.
 </ul>
 </blockquote>
 <hr width="100%" color="#808080" align="center">
-
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">Like it?  Please consider to<br> 
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2148409">
+<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+<br />
+Every penny or cent helps :-) 
+</form>
+<hr width="100%" color="#808080" align="center">
 <p align="left"><strong>DISCLAIMER</strong><a name="disclaimer"></a></p>
 <blockquote>
 phpJobScheduler IS PROVIDED &quot;AS IS&quot; WITHOUT REPRESENTATION OR WARRANTY OF ANY
@@ -329,6 +325,7 @@ ANY DEFECT IN phpJobScheduler, EVEN IF THE POSSIBILITY OF SUCH DAMAGES HAS BEEN 
 &nbsp; THIS DISCLAIMER SHALL SUPERSEDE ANY VERBAL OR WRITTEN STATEMENT TO THE CONTRARY. IF
 YOU DO NOT ACCEPT THESE TERMS YOU MUST CEASE AND DESIST USING phpJobScheduler IMMEDIATELY.
 </blockquote>
+
 <p align="left">&nbsp;</p>
 
 <div align="center">
