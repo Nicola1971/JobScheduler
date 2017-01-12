@@ -2,7 +2,7 @@
 
 <table class="jobs">
   <tr align="center">
-    <th class="thtitle" align="center"><strong>Details of jobs</strong></th>
+    <th class="thtitle">Details of jobs</th>
   </tr>
   <tr>
     <th align="center" width="90%"><form action="add-modify.php"
@@ -13,7 +13,7 @@
         <tr bgColor="#ffffff" align="center">
           <td vAlign="top" align="right"><b>Script to run:</b></td>
           <td align="left" colspan="2"><input class="box" size="100"
-          value="" name="scriptpath"><font size="2"><strong> <a class="btn btn-default" href="javascript:testpath();">test path^</a></strong></font><br>
+          value="" name="scriptpath"><font size="2"><strong> <a class="btn btn-default btn-path" href="javascript:testpath();">test path^</a></strong></font><br>
           enter the path to the script you wish to run<script language="JavaScript"><!--
 function testpath()
 {
@@ -223,11 +223,11 @@ function testpath()
         <tr bgColor="#ffffff" align="center">
           <td vAlign="top" align="right"></td>
           <td align="left" colspan="2">
-		  <div align="center"><center><p>&nbsp;<input class="button" type="button"
-          onclick="add()" value="Add Job" name="button"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
-          class="button" type="button" onclick="javascript:document.location='index.php'"
-          value="Cancel" name="cancel"></p>
-          </center></div></td>
+		  <div align="center"><span class="actionButtons jobsButtons">
+              <a class="primary" type="button" onclick="add()" value="Add Job" name="button">Add Job</a>  
+              <a class="button" type="button" onclick="javascript:document.location='index.php'"
+                 value="Cancel" name="cancel">Cancel</a>
+          </span></div></td>
         </tr>
 </TBODY>
       </table>
