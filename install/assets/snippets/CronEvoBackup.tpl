@@ -4,7 +4,7 @@
  * Execute a backup of Evo with url parameters
  *
  * @author    Nicola Lambathakis
- * @version    1.2 RC1
+ * @version    1.2.1 RC1
  * @category	snippet
  * @internal	@modx_category admin
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
