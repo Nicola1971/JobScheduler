@@ -6,9 +6,9 @@ if (empty ($modx->config)) {
     $modx->getSettings();
 }
 $modx->invokeEvent("OnWebPageInit");
-$message = "Backup Database Successfull";
+$message = "Backup Sql Database Successfull";
 
-$out = $modx->runSnippet('CronEvoBackup', array('mode' => 'dbonly', 'zipdb' => '0'));
+$out = $modx->runSnippet('CronEvoBackup', array('mode' => 'dbonly', 'zipdb' => '0', 'number_of_backups' => '10'));
 $return = array('message' => $out);
 //echo json_encode($return);
 echo $message;
