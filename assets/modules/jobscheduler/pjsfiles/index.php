@@ -18,7 +18,7 @@ update_db(); // check database is up-to-date, if not add required tables
 $headerout ='<html>
 <head>
 <title>JobScheduler - Tasks </title>
-<link rel="stylesheet" type="text/css" href="../../../../manager/media/style/MODxRE2/style.css" />
+<link rel="stylesheet" type="text/css" href="../../../../manager/media/style/default/style.css" />
 <link rel="stylesheet" href="../../../../manager/media/style/common/font-awesome/css/font-awesome.min.css" />
 <script src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/tabpane.js"></script>
