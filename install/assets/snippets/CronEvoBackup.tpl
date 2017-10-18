@@ -4,7 +4,7 @@
  * Execute a backup of Evo with url parameters
  *
  * @author    Nicola Lambathakis
- * @version    1.2.1 RC1
+ * @version    1.3 RC1
  * @category	snippet
  * @internal	@modx_category admin
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
@@ -31,7 +31,13 @@ $bkp_user  = $modx->getLoginUserName();
 $archive_prefix     = (isset($archive_prefix)) ? $archive_prefix : $modx->config['site_name'];
 $archive_suffix     = date('Y-m-d-Hi') . '_CRON';
 $archive_file       = $modx_backup_dir . $archive_prefix . '_' . $archive_suffix . '_auto_bkp.zip';
-$database_filename  = $archive_suffix . '_db_bkp.sql';    
+$database_filename  = $archive_suffix . '_db_bkp.sql';  
+/*manual config for now*/
+$sendEmail = isset($sendEmail) ? $sendEmail : 'no';
+$SendTo = isset($SendTo) ? $SendTo : $modx->config['emailsender'];
+$subject = isset($subject) ? $subject : 'cron-backup done';
+$SendToCC = isset($SendToCC) ? $SendToCC : '';
+
     if (file_exists($archive_file)) {
     } else {      
         $dir3 = $modx_root_dir;
@@ -519,7 +525,19 @@ EOD;
             if (array_key_exists($number_of_backups, $files3)) {
                 unlink($modx_db_backup_dir . $files3[$number_of_backups]);
             }
-            
+  // Send email
+	
+if ($sendEmail == 'yes') {
+$to = $SendTo;
+$txt = "<h1>".$subject."</h1><a href=\"".$modx->config['site_url']."assets/modules/evobackup/downloadsql.php?filename=".basename($database_filename)."\">Download Backup</a>";
+$msg = wordwrap($txt,255);
+$headers = "From: ".$modx->config['emailsender']."" . "\r\n" .
+"CC: ".$SendToCC."";
+$my_file = $archive_prefix . '_' . $archive_suffix . '_auto_bkp.zip';
+$my_path = $modx->config['site_url'].$modx_db_backup_dir;
+mail($to,$subject,$msg,$headers);
+}
+// end Send email            
         } else {
             $o->setError(1, "Unable to Backup Database");
             $o->dumpError();
