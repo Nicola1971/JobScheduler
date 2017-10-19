@@ -37,8 +37,8 @@ $headerout ='<html>
 </h1>
 <div id="actions">
     <ul class="actionButtons">
-        <li id="Button5"><a href="../../../../manager/index.php?a=112&id='.$module_id.'">Back</a></li>
-        <li id="Button5"><a href="../../../../manager/index.php?a=2">Close</a></li>
+        <li id="Button5"><a href="../../../../manager/index.php?a=112&id='.$module_id.'"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a></li>
+        <li id="Button5"><a href="../../../../manager/index.php?a=2"><i class="fa fa-times-circle" aria-hidden="true"></i> Close</a></li>
     </ul>
 </div>
 <div class="sectionBody">  
