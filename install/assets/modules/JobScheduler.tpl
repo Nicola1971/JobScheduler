@@ -4,7 +4,7 @@
  *  automate tasks by scheduling PHP scripts to run at set intervals
  *
  * @category	module
- * @version     1.3 beta
+ * @version     1.3 beta2
  * @author      Author: Nicola Lambathakis http://www.tattoocms.it/
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  * @internal	@modx_category admin
