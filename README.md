@@ -1,7 +1,7 @@
 # JobScheduler
 
 JobScheduler Module for Evolution CMS
-It is a replacement for cron jobs on Unix or scheduled tasks
+It is a replacement for cron jobs or scheduled tasks
 
 Based on : PhpJobScheduler www.phpjobscheduler.co.uk
 
