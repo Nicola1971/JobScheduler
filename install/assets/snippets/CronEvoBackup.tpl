@@ -4,7 +4,7 @@
  * Execute a backup of Evo with url parameters
  *
  * @author    Nicola Lambathakis
- * @version    1.3 RC1
+ * @version    1.3 RC2
  * @category	snippet
  * @internal	@modx_category admin
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
@@ -22,6 +22,11 @@ $customfold4 = isset($_GET['customfold4']) ? $_GET['customfold4'] : '';
 $customfold5 = isset($_GET['customfold5']) ? $_GET['customfold5'] : '';
 $zipdb = isset($_GET['zipdb']) ? $_GET['zipdb'] : '0';
 $deletesql = isset($_GET['deletesql']) ? $_GET['deletesql']  : '1';
+/*send email*/
+$sendEmail = isset($_GET['sendEmail']) ? $_GET['sendEmail'] : 'yes';
+$SendTo = isset($_GET['SendTo']) ? $_GET['SendTo'] : $modx->config['emailsender'];
+$subject = isset($_GET['subject']) ? $_GET['subject'] : 'Scheduler Backup Done';
+$SendToCC = isset($_GET['SendToCC']) ? $_GET['SendToCC'] : '';
 
 $modx_root_dir      = $modx->config['base_path'];
 $mods_path          = $modx->config['base_path'] . "assets/modules/";
@@ -32,11 +37,7 @@ $archive_prefix     = (isset($archive_prefix)) ? $archive_prefix : $modx->config
 $archive_suffix     = date('Y-m-d-Hi') . '_CRON';
 $archive_file       = $modx_backup_dir . $archive_prefix . '_' . $archive_suffix . '_auto_bkp.zip';
 $database_filename  = $archive_suffix . '_db_bkp.sql';  
-/*manual config for now*/
-$sendEmail = isset($sendEmail) ? $sendEmail : 'no';
-$SendTo = isset($SendTo) ? $SendTo : $modx->config['emailsender'];
-$subject = isset($subject) ? $subject : 'cron-backup done';
-$SendToCC = isset($SendToCC) ? $SendToCC : '';
+
 
     if (file_exists($archive_file)) {
     } else {      
@@ -529,7 +530,11 @@ EOD;
 	
 if ($sendEmail == 'yes') {
 $to = $SendTo;
-$txt = "<h1>".$subject."</h1><a href=\"".$modx->config['site_url']."assets/modules/evobackup/downloadsql.php?filename=".basename($database_filename)."\">Download Backup</a>";
+if ($mode == 'dbonly') {
+$txt = "<h1>".$subject."</h1><a href=\"".$modx->config['site_url']."assets/modules/jobscheduler/downloadsql.php?filename=".basename($database_filename)."\">Download Database Backup</a>";
+ }
+else {$txt = "<h1>".$subject."</h1><a href=\"".$modx->config['site_url']."assets/modules/jobscheduler/download.php?filename=".basename($database_filename)."\">Download Site Backup</a>";
+	 }
 $msg = wordwrap($txt,255);
 $headers = "From: ".$modx->config['emailsender']."" . "\r\n" .
 "CC: ".$SendToCC."";
