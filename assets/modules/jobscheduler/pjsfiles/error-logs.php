@@ -47,11 +47,9 @@ $headerout ='<html>
 
    <div class="tab-page">
       <h2 class="tab"><i class="fa fa-clock-o" aria-hidden="true" id="ManageTasks"></i> Manage Tasks</h2></h2>
-<div align="center">
-  <center>
- <a class="btn btn-default" href="./"><i class="fa fa-clock-o fa-lg"></i> Scheduled tasks</a> <a class="btn btn-default" href="./?add=1"><i class="fa fa-plus-circle fa-lg"></i> Add a NEW schedule</a> <a class="btn btn-default" href="error-logs.php"><i class="fa fa-exclamation-circle fa-lg"></i> View error-logs</a><br>
+<div align="left">
+ <a class="btn btn-secondary" href="./"><i class="fa fa-clock-o fa-lg"></i> Scheduled tasks</a> <a class="btn btn-secondary" href="./?add=1"><i class="fa fa-plus-circle fa-lg"></i> Add a NEW schedule</a> <a class="btn btn-secondary" href="error-logs.php"><i class="fa fa-exclamation-circle fa-lg"></i> View error-logs</a><br>
 </strong>  <br>
-  </center>
 </div>';
 echo $headerout;
 include("error-logs.html");

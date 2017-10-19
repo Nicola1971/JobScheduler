@@ -35,14 +35,9 @@
                 <h2 class="tab"><span><i class="fa fa-clock-o" aria-hidden="true"></i> Tasks</span></h2>
 
                 <h3> Manage Tasks</h3>
-                <p><a href="../assets/modules/jobscheduler/pjsfiles/"><i class="fa fa-clock-o fa-lg"></i><strong> Scheduled tasks</strong></a>
-                </p>
-
-                <p><a href="../assets/modules/jobscheduler/pjsfiles?add=1"><i class="fa fa-plus-circle fa-lg"></i><strong> Add a NEW schedule</strong></a>
-                </p>
-
-                <p><a href="../assets/modules/jobscheduler/pjsfiles/error-logs.php"><i class="fa fa-exclamation-circle fa-lg"></i><strong> View error-logs</strong></a>
-                </p>
+                <a class="btn btn-secondary" href="../assets/modules/jobscheduler/pjsfiles/"><i class="fa fa-clock-o fa-lg"></i> Scheduled tasks</a> <a class="btn btn-secondary" href="../assets/modules/jobscheduler/pjsfiles?add=1"><i class="fa fa-plus-circle fa-lg"></i> Add a NEW schedule</a> <a class="btn btn-secondary" href="../assets/modules/jobscheduler/pjsfiles/error-logs.php"><i class="fa fa-exclamation-circle fa-lg"></i> View error-logs</a><br>
+                
+     
                 <!---
   <p><a href="../assets/modules/jobscheduler/firepjs.php"><i class="fa fa-play-circle fa-lg"></i> <strong> Run the scheduled tasks already 
   added above.</strong></a></p>
