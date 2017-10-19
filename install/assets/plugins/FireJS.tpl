@@ -10,7 +10,7 @@
  * @internal    @events OnWebPagePrerender
  * @internal    @installset base
  * @internal    @disabled 0
- * @internal    @modx_category Cookies
+ * @internal    @modx_category Admin
  * @internal    @properties  
  */
 
