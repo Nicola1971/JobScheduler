@@ -1,12 +1,12 @@
 //<?php
 /**
- * firepjs
+ * FireJS
  *
- * fire jobscheduler image
+ * Fire JobScheduler image (render jobschedule image before the closing Body tag)
  *
  * @author    Nicola Lambathakis
  * @category    admin
- * @version    1.0  RC3
+ * @version    1.2  RC3
  * @internal    @events OnWebPagePrerender
  * @internal    @installset base
  * @internal    @disabled 0
@@ -16,6 +16,6 @@
 
 
 $firepjs = '<img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/>';
-$find = array('<body>');
-$replace = array('<body><img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/>');
+$find = array('</body>');
+$replace = array('<img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/></body>');
 $modx->documentOutput = str_replace($find,$replace,$modx->documentOutput);
