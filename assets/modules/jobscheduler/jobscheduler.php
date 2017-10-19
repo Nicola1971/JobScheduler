@@ -50,14 +50,18 @@
 <!--first section-->
                 <div class="tab-section">
                     <div class="tab-header">
-                        PhpJobScheduler Module for Evolution CMS
+                        JobScheduler Module for Evolution CMS
                     </div>
                     <div class="tab-body">
-                        <strong><em>php</em>JobScheduler is designed to automate tasks by
-scheduling PHP scripts to run at set intervals.</strong>
-                        <br> This version runs silently (no screen output) but saves the output, including any errors, to the database.
-                        <br> Full details can be found at: <a href="http://www.phpjobscheduler.co.uk/">www.phpjobscheduler.co.uk</a>
-
+                    <h3>Designed to automate tasks by
+scheduling PHP scripts to run at set intervals.</h3>
+<p>It is a replacement for cron jobs on Unix or scheduled tasks<br> This version runs silently (no screen output) but saves the output, including any errors, to the database.</p>
+                    <br> Based on : PhpJobScheduler <a href="http://www.phpjobscheduler.co.uk/">www.phpjobscheduler.co.uk</a><br/>
+                        
+                        
+                        <hr/>
+<br/> Evolution Module repository: <a target="_blank"  href="https://github.com/Nicola1971/JobScheduler"><i class="fa fa-github" aria-hidden="true"></i> https://github.com/Nicola1971/JobScheduler</a>
+<br/> Evolution Module issues: <a target="_blank"  href="https://github.com/Nicola1971/JobScheduler/issues"><i class="fa fa-github" aria-hidden="true"></i> https://github.com/Nicola1971/JobScheduler/issues</a>
                     </div>
                 </div>
                 <!--end first section-->
