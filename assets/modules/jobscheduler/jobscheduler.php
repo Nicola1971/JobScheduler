@@ -133,20 +133,40 @@ scheduling PHP scripts to run at set intervals.</h3>
             </div>
 
             <div class="tab-page">
-                <h2 class="tab"><span><i class="fa fa-database" aria-hidden="true"></i> CronEvoBackup</span></h2>
-
+                <h2 class="tab"><span><i class="fa fa-database" aria-hidden="true"></i> Cron Snippets</span></h2>
+                <!--start section-->
+                <div class="tab-section">
+                    <div class="tab-header">
+                     Cron Jobs Snippets   
+                    </div>
+                    <div class="tab-body">
+                     <h3>How to create your own Cron Snippet</h3> 
+                    <p><b>Cron Jobs Snippets</b> are simple php scripts that use <b>runSnippet</b> API to execute snippets:<br/></p>
+                    <code>
+                    runSnippet(\'CronEvoBackup\', array(\'mode\' => \'dbonly\', \'zipdb\' => \'0\'));
+                    </code>
+                     
+                    </div>
+                </div>
+                <!--end  section-->
                 <!--first section-->
                 <div class="tab-section">
                     <div class="tab-header">
                         CronEvoBackup
                     </div>
                     <div class="tab-body">
-                        This package includes <b>CronEvoBackup snippet</b> to create scheduled automatic backups of your Evolution CMS
+                       <h3>About CronEvoBackup</h3>
+                        <p>This package includes <b>CronEvoBackup snippet</b> to create scheduled automatic backups of your Evolution CMS</p>
+                        <h3>How To</h3>
                         <p>To create your custom backup setting, check the two files included in this package:</p>
                         <p><b>cron-backup-sqlonly.php</b>
                         </p>
                         <p><b>cron-backup-full.php</b>
                         </p>
+                        <h3>Features</h3>
+                        <p>4 backup modes: dbonly,light,medium,full</p>
+                        <p>Send email link: automatically send email with link to download the created backup</p>
+                        <p>Compatible with EvoBackup</p>
                     </div>
                 </div>
                 <!--end first section-->
@@ -154,25 +174,27 @@ scheduling PHP scripts to run at set intervals.</h3>
                 <!--second section-->
                 <div class="tab-section">
                     <div class="tab-header">
-                        CronEvoBackup Features
+                        CronRestoreDB
                     </div>
                     <div class="tab-body">
-                        <p>4 backup modes: dbonly,light,medium,full</p>
-                        <p>Send email link: automatically send email with link to download the created backup</p>
-                        <p>Compatible with EvoBackup</p>
+                       <h3>About CronRestoreDB</h3>
+                        <p><b>CronRestoreDB</b> Restore a Database backup from Evo backup/snapshot folder</p>
+                        <h3>How To</h3>
+                        <p>Open file <b>cron-backup-full.php</b> and set your snapshot name in to <b>&sql_restore_file parameter</b>
+                        </p>
                     </div>
                 </div>
                 <!--end second section-->
-                <!--third section-->
+                <!--start section-->
                 <div class="tab-section">
                     <div class="tab-header">
-                        CronEvoBackup Documentation
+                        
                     </div>
                     <div class="tab-body">
-                        coming soon
+                       
                     </div>
                 </div>
-                <!--end third section-->
+                <!--end  section-->
             </div>
 
         </div>
