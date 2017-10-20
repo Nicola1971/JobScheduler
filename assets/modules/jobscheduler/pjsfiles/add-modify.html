@@ -1,20 +1,20 @@
-<div align="center"><center>
+<div class="table-responsive">
 
-<table class="jobs">
-  <tr align="center">
-    <th class="thtitle">Details of jobs</th>
+<table class="table data jobs">
+  <tr >
+    <th class="thtitle"><h3><i class="fa fa-info-circle" aria-hidden="true"></i> Details of jobs</h3></th>
   </tr>
   <tr>
-    <th align="center" width="90%"><form action="add-modify.php"
-    method="POST" NAME="I_F" align="center">
+    <form action="add-modify.php"
+    method="POST" NAME="I_F" >
       <input type="hidden" name="id" value="0"><input type="hidden" name="time_last_fired"
-      value="0"><div align="center"><center><table class="addjobs">
+      value="0"><div ><center><table class="table data addjobs">
 <TBODY>
-        <tr bgColor="#ffffff" align="center">
-          <td vAlign="top" align="right"><b>Script to run:</b></td>
-          <td align="left" colspan="2"><input class="box" size="100"
-          value="" name="scriptpath"><font size="2"><strong> <a class="btn btn-default btn-path" href="javascript:testpath();">test path^</a></strong></font><br>
-          enter the path to the script you wish to run<script language="JavaScript"><!--
+        <tr>
+          <td vAlign="top" align="right"><b>Script to run:</b><br/>
+              <small>enter the path to the script you wish to run</small></td>
+          <td align="left" colspan="2"><input style="width:90%" type="text" class="box" size="80"
+          value="" name="scriptpath"> <a class="btn btn-warning" href="javascript:testpath();">Test Path</a></strong><script language="JavaScript"><!--
 function testpath()
 {
  if (confirm("If you have entered the path to the script correctly the script will be executed NOW.\n\nDo you wish to continue?")) 
@@ -25,22 +25,45 @@ function testpath()
  }
 }
 // --></script>
-          <strong>- <a href="http://members.dwalker.co.uk/forum/viewtopic.php?p=2759" target="_blank">help
-          and more detail here^</a></strong></font></td>
+          </td>
         </tr>
-        <tr bgColor="#ffffff" align="center">
-          <td vAlign="top" align="right"><b>Job name:</b></td>
-          <td align="left" colspan="2"><input class="box" size="29" name="name"
-          value="Backup Evo Database"><br>
-          The name will be used to refer to this new job<br />
-          <br /></td>
+        <tr >
+          <td vAlign="top" align="right"><b>Job name:</b><br/>
+          <small>The name will be used to refer to this new job</small></td>
+          <td align="left" colspan="2"><input type="text" class="box" size="29" name="name"
+          value="Backup Evo Database"></td>
         </tr>
-        <tr bgColor="#ffffff" align="center">
-          <td vAlign="top" align="right" rowspan="4"><b><br>
-          <br>
-          Run this script:</b></td>
-          <td align="left" bgcolor="#E9E9E9"><div align="right"><strong><font color="#000000">MINUTES</font></strong></td>
-          <td align="left" bgcolor="#E9E9E9">- run every: 
+        <tr><th align="right" colspan="2"><h3>
+           <i class="fa fa-play-circle-o" aria-hidden="true"></i> Run this Job:</h3></th></tr>
+          <tr>
+        <tr>
+            <td><b>Run this job:</b><br/>
+            <small> when selecting to run <strong>just ONCE only</strong> the job will be 
+		  deleted following the first run</small></td>
+            <td>
+		  <select class="button" name="run_only_once" >
+            <option selected value="0">until I delete it</option>
+            <option value="1">just ONCE only</option>
+          </select> 
+                
+            </td>
+        </tr>
+        <tr>
+            <td><b>Pause this job:</b><br/><small>useful to save a job to run later, or as a reference</small></td>
+        <td>
+        <select class="button" name="paused" >
+            <option selected value="0">Currently running</option>
+            <option value="1">PAUSED - will not run</option>
+          </select></td>
+        </tr>
+        <tr><th align="right" colspan="2"><h3>
+           <i class="fa fa-clock-o" aria-hidden="true"></i> Run every:</h3></th></tr>
+          <tr>
+        <tr>
+
+          <td align="left"><div align="left"><b><font color="#000000">MINUTES</font></b><br/>
+              <small>you MUST update the time frame window to use minutes see </small></td>
+          <td align="left">Run every: 
             <select class="button" name="minutes"
           onchange="disable_others()" size="1" value="0" >
             <option selected value="-1">0</option>
@@ -103,12 +126,12 @@ function testpath()
             <option value="57">57 </option>
             <option value="58">58 </option>
             <option value="59">59 </option>
-          </select> minute(s)&nbsp; you MUST update the time frame window to use minutes see <a
+              </select> <b>minute(s)</b><a
           href="../readme.html#timeframewindow">readme file</a></td>
         </tr>
         <tr>
-          <td align="left" bgcolor="#E9E9E9"><div align="right"><font color="#FF0000"><strong>HOURLY</strong></font></td>
-          <td align="left" bgcolor="#E9E9E9">- run every: 
+          <td align="left"><div align="left"><font color="#FF0000"><strong>HOURLY</strong></font></td>
+          <td align="left">Run every:  
             <select class="button" name="hours"
           onchange="disable_others()" size="1" value="0" >
             <option selected value="-1">0</option>
@@ -135,12 +158,12 @@ function testpath()
             <option value="21">21 </option>
             <option value="22">22</option>
             <option value="23">23</option>
-          </select> hour(s)</td>
+          </select> <b>hour(s)</b></td>
         </tr>
-        <tr align="center">
-          <td align="left" bgcolor="#E9E9E9"><div align="right"><font color="#FF8000"><strong>DAILY</strong></font></td>
-          <td align="left" bgcolor="#E9E9E9">- run every: 
-            <select class="button" name="days"  onchange="disable_others()"  >
+        <tr >
+          <td align="left"><div align="left"><font color="#FF8000"><strong>DAILY</strong></font></td>
+          <td align="left">Run every: 
+            <select class="button" name="days" size="1" onchange="disable_others()"  >
             <option selected value="-1">0</option>
             <option value="1">1 </option>
             <option value="2">2 </option>
@@ -148,13 +171,12 @@ function testpath()
             <option value="4">4 </option>
             <option value="5">5 </option>
             <option value="6">6 </option>
-          </select> day(s)</td>
+          </select> <b>day(s)</b></td>
         </tr>
-        <tr align="center">
-          <td align="left" bgcolor="#E9E9E9"><div align="right"><font color="#C00000"><strong>WEEKLY</font><br>
-			  <br>Run this job:<br><br>Pause this job:&nbsp; </strong></td>
-          <td align="left" bgcolor="#E9E9E9">- run every: 
-            <select class="button" name="weeks"  onchange="disable_others()" >
+        <tr >
+          <td align="left"><div align="left"><font color="#C00000"><strong>WEEKLY</strong></font></td>
+          <td align="left">Run every: 
+            <select class="button" name="weeks" size="1" onchange="disable_others()" >
             <option selected value="-1">0</option>
             <option value="1">1 </option>
             <option value="2">2 </option>
@@ -208,35 +230,23 @@ function testpath()
             <option value="50">50 </option>
             <option value="51">51</option>
             <option value="52">52</option>
-          </select> week(s)<br><br> 
-		  <select class="button" name="run_only_once" >
-            <option selected value="0">until I delete it</option>
-            <option value="1">just ONCE only</option>
-          </select> 
-           
-          when selecting to run <strong>just ONCE only</strong> the job will be 
-		  deleted following the first run<br><br><select class="button" name="paused" >
-            <option selected value="0">Currently running</option>
-            <option value="1">PAUSED - will not run</option>
-          </select>&nbsp; useful to save a job to run later, or as a reference</td>
-        </tr>
-        <tr bgColor="#ffffff" align="center">
+              </select> <b>week (s)</b></td></tr>
+         <tr bgColor="#ffffff" >
           <td vAlign="top" align="right"></td>
           <td align="left" colspan="2">
-		  <div align="center"><span class="actionButtons jobsButtons">
-              <a class="primary" type="button" onclick="add()" value="Add Job" name="button">Add Job</a>  
-              <a class="button" type="button" onclick="javascript:document.location='index.php'"
-                 value="Cancel" name="cancel">Cancel</a>
+		  <div align="right"><span class="jobsButtons">
+              <a style="color:#FFF" class="btn btn-success" onclick="add()">Add Job</a>  
+              <a class="btn btn-secondary" onclick="javascript:document.location='index.php'">Cancel</a>
           </span></div></td>
-        </tr>
+        </tr>       
 </TBODY>
       </table>
-      </center></div>
+      </div>
     </form>
-    </th>
+    
   </tr>
 </table>
-</center></div><script language="JavaScript"><!--
+</div><script language="JavaScript"><!--
 original_minutes=0;
 original_hours=0;
 original_days=0;

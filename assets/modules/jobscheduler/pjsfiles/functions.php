@@ -159,29 +159,29 @@ function show_jobs()
         $paused_txt= $paused?'<font color="#ff0000">PAUSED</font>':'';
         $table_rows.="
            <tr align=\"center\">
-           <th align=\"left\" bgcolor=\"$bg_colour\">
+           <td align=\"left\" bgcolor=\"$bg_colour\">
            <div id=\"pjs$id\">
              <font color=\"#008000\">$paused_txt &quot;$name&quot;</font> - <a
              href=\"javascript:modify($id);\">MODIFY</a> -
              <a href=\"javascript:deletepjs('".PJS_TABLE."',$id,'$name');\">DELETE?</a> $run_only_once_txt<br>
              <small>Script path: <font color=\"#000000\">$scriptpath</font></small>
            </div>
-           </th>
-          <th align=\"center\" bgcolor=\"$bg_colour\">
+           </td>
+          <td align=\"center\" bgcolor=\"$bg_colour\">
            <div id=\"pjs$id\">
              $last_fire_hours $last_fire_date
            </div>
-           </th>
-           <th align=\"center\" bgcolor=\"$bg_colour\">
+           </td>
+           <td align=\"center\" bgcolor=\"$bg_colour\">
            <div id=\"pjs$id\">
              $fire_hours on<br> $fire_date
            </div>
-           </th>
-            <th align=\"center\" bgcolor=\"$bg_colour\">
+           </td>
+            <td align=\"center\" bgcolor=\"$bg_colour\">
            <div id=\"pjs$id\">
             $time_interval[0] $time_interval[1]
            </div>
-           </th>
+           </td>
            </tr>";
   }
  }
@@ -211,7 +211,7 @@ function show_logs($qstart)
    else $show_hide="NO data";
    $table_rows.="
      <tr align=\"center\">
-      <th align=\"left\" bgcolor=\"$bg_colour\">
+      <td align=\"left\" bgcolor=\"$bg_colour\">
       <div id=\"pjs$id\">
         <small>Script: <font color=\"#000000\">$script</font>
             <br>Execution time: <font color=\"#000000\">$execution_time</font>
@@ -222,12 +222,12 @@ function show_logs($qstart)
          </div>
         </small></small>
       </div>
-     </th>
-     <th align=\"center\" bgcolor=\"$bg_colour\">
+     </td>
+     <td align=\"center\" bgcolor=\"$bg_colour\">
       <small><div id=\"pjs$id\">$log_date <br>
        <a href=\"javascript:deletepjs('".LOGS_TABLE."',$id,'$script');\">DELETE?</a>
        <br></small></div>
-     </th>
+     </td>
     </tr>";
     $i++;
   }

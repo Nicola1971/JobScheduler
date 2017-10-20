@@ -20,13 +20,14 @@ $headerout ='<html>
 <title>JobScheduler - Tasks </title>
 <link rel="stylesheet" type="text/css" href="../../../../manager/media/style/default/style.css" />
 <link rel="stylesheet" href="../../../../manager/media/style/common/font-awesome/css/font-awesome.min.css" />
-<script src="../js/jquery.min.js"></script>
+
 <script type="text/javascript" src="../js/tabpane.js"></script>
 <script src="functions.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
-
 <body>
+<style>
+tr h3 {margin-bottom:0;color:#499bea}
+</style>
 <h1 class="pagetitle">
   <span class="pagetitle-icon">
     <i class="fa fa-clock-o"></i>

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
     <script src="../assets/modules/jobscheduler/js/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/modules/jobscheduler/js/tabpane.js"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/modules/jobscheduler/css/style.css" />
 </head>
 
 <body>
