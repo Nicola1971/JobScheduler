@@ -4,7 +4,7 @@
  * Execute a DB restore 
  *
  * @author    Nicola Lambathakis
- * @version    1.0 RC
+ * @version    1.1 RC
  * @category	snippet
  * @internal	@modx_category admin
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
@@ -13,10 +13,11 @@
 // usage
 // [!CronRestoreDB? &sql_restore_file=`2017-10-20_17-33-42.sql`!]
 // [!CronRestoreDB!] http://localhost/evotest/restore.html&sql_restore_file=2017-10-20_17-33-42.sql 
-/*manual config for now*/
+global $modx;
+$sitename = $modx->config['site_name'];
 $sendEmail = isset($sendEmail) ? $sendEmail : 'yes';
 $SendTo = isset($SendTo) ? $SendTo : $modx->config['emailsender'];
-$subject = isset($subject) ? $subject : 'restore db done';
+$subject = isset($subject) ? $subject : ''.$sitename.' restore db done';
 $SendToCC = isset($SendToCC) ? $SendToCC : '';
 $modx_db_backup_dir = $_SERVER['DOCUMENT_ROOT'].'/assets/backup/';
 //comment the line below for url parameter
@@ -38,8 +39,8 @@ mysqli_multi_query($sql,$sqlSource);
 $modx->clearCache();
   // Send email	
 if ($sendEmail == 'yes') {
-$to = $SendTo;
-$txt = "[(site_name)] Restore DB Done";
+$to =  $SendTo;
+$txt = "".$sitename." Restore DB Done";
 $msg = wordwrap($txt,255);
 $headers = "From: ".$modx->config['emailsender']."" . "\r\n" .
 "CC: ".$SendToCC."";
