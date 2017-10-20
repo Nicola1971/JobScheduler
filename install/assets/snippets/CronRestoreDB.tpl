@@ -9,17 +9,15 @@
  * @internal	@modx_category admin
  * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
  */
-
 <?php
 // usage
-// [!RestoreDB? &sql_restore_file=`2017-10-20_12-20-35.sql`!]
-// [!RestoreDB!] http://localhost/evotest/restore.html&sql_restore_file=2017-10-20_12-20-35.sql 
+// [!CronRestoreDB? &sql_restore_file=`2017-10-20_17-33-42.sql`!]
+// [!CronRestoreDB!] http://localhost/evotest/restore.html&sql_restore_file=2017-10-20_17-33-42.sql 
 /*manual config for now*/
-$sendEmail = isset($sendEmail) ? $sendEmail : 'no';
+$sendEmail = isset($sendEmail) ? $sendEmail : 'yes';
 $SendTo = isset($SendTo) ? $SendTo : $modx->config['emailsender'];
 $subject = isset($subject) ? $subject : 'restore db done';
 $SendToCC = isset($SendToCC) ? $SendToCC : '';
-
 $modx_db_backup_dir = $_SERVER['DOCUMENT_ROOT'].'/assets/backup/';
 //comment the line below for url parameter
 $sql_restore_file = isset($sql_restore_file) ? $sql_restore_file : '';
@@ -37,7 +35,7 @@ else {
 $dbname = str_replace("`","",$dbase);        
 $sql = mysqli_connect($database_server, $database_user, $database_password, $dbname);
 mysqli_multi_query($sql,$sqlSource);
-$modx->clearCache('full');
+$modx->clearCache();
   // Send email	
 if ($sendEmail == 'yes') {
 $to = $SendTo;

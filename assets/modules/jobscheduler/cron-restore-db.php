@@ -8,8 +8,8 @@ if (empty ($modx->config)) {
 $modx->invokeEvent("OnWebPageInit");
 $message = "Restore Database Successfull";
 
-$out = $modx->runSnippet('CronRestoreDB', array('sql_restore_file' => '2017-10-20_12-20-35.sql'));
+$out = $modx->runSnippet('CronRestoreDB', array('sql_restore_file' => '2017-10-20_17-33-42.sql'));
 $return = array('message' => $out);
 //echo json_encode($return);
-echo $message;
+echo $out;
 ?>
