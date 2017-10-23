@@ -1,5 +1,5 @@
 /**
- * DashboardLinks 
+ * DashboardJobs 
  *
  * Dashboard Dashboard Scheduled Jobs widget
  * @author    Nicola Lambathakis
