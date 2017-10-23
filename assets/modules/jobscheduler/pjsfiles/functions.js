@@ -38,8 +38,8 @@ function deletepjs(table_name,pjsid,title)
   http.open("POST", url, true);
   http.onreadystatechange = getReturns;
   http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  http.setRequestHeader("Content-length", params.length);
-  http.setRequestHeader("Connection", "close");
+ // http.setRequestHeader("Content-length", params.length);
+ // http.setRequestHeader("Connection", "close");
   http.send(params);
  }
 }
