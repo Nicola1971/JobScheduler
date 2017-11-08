@@ -1,4 +1,4 @@
-# JobScheduler
+# JobScheduler Beta
 
 JobScheduler Module for Evolution CMS
 It is a replacement for cron jobs or scheduled tasks
