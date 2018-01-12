@@ -1,15 +1,12 @@
 <?php global $_lang, $manager_language, $manager_theme,$theme_refresher,$modx_manager_charset, $syncid, $syncsite,$messagesallowed; $modx_root_dir=$modx->config['base_path']; $mods_path = $modx->config['base_path'] . "assets/modules/"; $site_name = preg_replace('/[^a-zA-Z0-9]+/', '_', $modx->config['site_name']); $module_id = (!empty($_REQUEST["id"])) ? (int)$_REQUEST["id"] : $yourModuleId; $out = '
 <html>
-
 <head>
     <title>EvoJobScheduler</title>
     <link rel="stylesheet" type="text/css" href="media/style/'.$manager_theme.'/style.css" />
-    <link rel="stylesheet" href="media/style/common/font-awesome/css/font-awesome.min.css" />
     <script src="../assets/modules/jobscheduler/js/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/modules/jobscheduler/js/tabpane.js"></script>
+    <script src="media/script/tabpane.js"></script>
 </head>
-
-<body>
+<body id="scheduler-body">
     <h1 class="pagetitle">
   <span class="pagetitle-icon">
     <i class="fa fa-clock-o"></i>
@@ -85,27 +82,40 @@ scheduling PHP scripts to run at set intervals.</h3>
                         New installation on Evolution:
                     </div>
                     <div class="tab-body">
-                        <p>Install with Package Manager or Extras Module </p>
-                        <p>1) Add to your Home page template the <strong> {{FireJS}} Chunk</strong> or Enable <strong> FireJS</strong> plugin (both included in this package), that will automatically add the required code.
-                            <p>or simply add to your <strong>existing<font color="#0080FF"> Template</font> or inside the content of a page</strong>, like your index.html home page and/or any other well visited page on any website:
+                        <h3>1) Install with Package Manager or Extras Module </h3>
+                        <h3>2) Add The required html code to your template.</h3>
+<h4>There are 3 ways to do it:</h4>
+						
+						<p>A) Add to your Home page template the <strong> {{FireJS}} Chunk</strong> (included in this package)</p>
+						<p>B) Enable <strong> FireJS</strong> plugin (included in this package), that will automatically add the required code.</p>
+                        <p>C) Manually add the HTML code, to your <strong>existing<font color="#0080FF"> Template</font> or inside the content of a page</strong>, like your index.html home page and/or any other well visited page on any website:
                             </p>
                             <blockquote>
                                 <code>
      &lt;img src="assets/modules/jobscheduler/firepjs.php?return_image=1" border="0"/&gt</code>
                             </blockquote>
-                            <p>The above <strong><font color="#0080FF">HTML</font></strong> can be added to any web page on any website (not just to the site where phpJobScheduler is installed). Adding this code will add a very small clear image to your page - invisible (unless you know its there). Execution is very quick so will not slow the loading of any pages. </p>
-
+                            <p>The above <strong><font color="#0080FF">HTML</font></strong> can be added to any web page on any website (not just to the site where phpJobScheduler is installed). <br/> <b>Adding this code will add a very small clear image to your page - invisible (unless you know its there). Execution is very quick so will not slow the loading of any pages.</b> </p>
+                       <h3>3) Add your scheduled job</h3>
                             <p>click on <strong><i class="fa fa-plus-circle fa-lg"></i> Add a NEW schedule</strong>, in the Tasks tab, to add your scheduled tasks</strong>
                             </p>
                             <blockquote>
                                 <p>If you have correctly completed the above the following <strong><font color="#FF8000">tables</font></strong> will be created in your database: </p>
                             </blockquote>
-                            <p>When you are happy all is running without error set DEBUG to false, edit the file:<strong> /phpjobscheduler/pjsfiles/config.inc.php </strong>
+                            
                             </p>
                     </div>
                 </div>
                 <!--end third section-->
-
+				<!-- section-->
+                <div class="tab-section">
+                    <div class="tab-header">
+                        DEBUG mode
+                    </div>
+                    <div class="tab-body">
+                        <p>For testing purpose, to verify the script is running without error set DEBUG to <b>true</b>, editing the file:<strong> /phpjobscheduler/pjsfiles/config.inc.php </strong>
+                    </div>
+                </div>
+                <!--end  section-->
                 <!-- section-->
                 <div class="tab-section">
                     <div class="tab-header">
@@ -133,7 +143,7 @@ scheduling PHP scripts to run at set intervals.</h3>
             </div>
 
             <div class="tab-page">
-                <h2 class="tab"><span><i class="fa fa-database" aria-hidden="true"></i> Cron Snippets</span></h2>
+                <h2 class="tab"><span><i class="fa fa-code" aria-hidden="true"></i> Included Cron Snippets</span></h2>
                 <!--start section-->
                 <div class="tab-section">
                     <div class="tab-header">
@@ -157,16 +167,22 @@ scheduling PHP scripts to run at set intervals.</h3>
                     <div class="tab-body">
                        <h3>About CronEvoBackup</h3>
                         <p>This package includes <b>CronEvoBackup snippet</b> to create scheduled automatic backups of your Evolution CMS</p>
+						<h3>Features</h3>
+                        <p><b>4 backup modes</b>: dbonly, light, medium, full</p>
+                        <p><b>Send email link</b>: Automatically send email with link to download the created backup, so you don\'t need to access to the manager or FTP to download the backup</p>
+                        <p>Compatible with <b>EvoBackup</b></p>
                         <h3>How To</h3>
                         <p>To create your custom backup setting, check the two files included in this package:</p>
+						<h4>Database Backup Only:</h4>
                         <p><b>cron-backup-sqlonly.php</b>
                         </p>
+						<p> and edit this line</p>
+						<p><code>$out = $modx->runSnippet(\'CronEvoBackup\', array(\'mode\' => \'dbonly\', \'zipdb\' => \'0\', \'number_of_backups\' => \'10\', \'sendEmail\' => \'yes\'));</code><br /></p>
+						<h4>Files + Database Backup:</h4>
                         <p><b>cron-backup-full.php</b>
                         </p>
-                        <h3>Features</h3>
-                        <p>4 backup modes: dbonly,light,medium,full</p>
-                        <p>Send email link: automatically send email with link to download the created backup</p>
-                        <p>Compatible with EvoBackup</p>
+						<p> and edit this line</p>
+						<p><code>$out = $modx->runSnippet(\'CronEvoBackup\', array(\'mode\' => \'full\', \'zipdb\' => \'1\', \'number_of_backups\' => \'10\', \'sendEmail\' => \'yes\'));</code><br /></p>
                     </div>
                 </div>
                 <!--end first section-->
@@ -178,9 +194,14 @@ scheduling PHP scripts to run at set intervals.</h3>
                     </div>
                     <div class="tab-body">
                        <h3>About CronRestoreDB</h3>
-                        <p><b>CronRestoreDB</b> Restore a Database backup from Evo backup/snapshot folder</p>
+                        <p>Periodically <b>Restore a Database backup</b> from Evo assets/backup (snapshot) folder.<br/>
+						Useful for website/admin demos</p>
                         <h3>How To</h3>
-                        <p>Open file <b>cron-backup-full.php</b> and set your snapshot name in to <b>&sql_restore_file parameter</b>
+                        <p>Open file <b>cron-restore-db.php</b> 
+						</p>
+						<p> edit this line</p>
+						<p><code>$out = $modx->runSnippet(\'CronRestoreDB\', array(\'sql_restore_file\' => \'2017-10-20_17-33-42.sql\'));</code></p>
+						<p>and set your snapshot name in to <b>&sql_restore_file parameter</b>
                         </p>
                     </div>
                 </div>
